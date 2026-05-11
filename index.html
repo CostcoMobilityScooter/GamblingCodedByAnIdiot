@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blackjack Casino</title>
 
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>🃏 Blackjack Casino</h1>
+
+    <div class="money-box">
+      <h2>Balance: $<span id="balance">1000</span></h2>
+      <h3>Bet: $<span id="bet-display">0</span></h3>
+
+      <div class="bet-buttons">
+        <button onclick="placeBet(10)">$10</button>
+        <button onclick="placeBet(50)">$50</button>
+        <button onclick="placeBet(100)">$100</button>
+        <button onclick="placeBet(500)">$500</button>
+      </div>
+    </div>
+
+    <div class="game-area">
+
+      <div class="dealer-section">
+        <h2>Dealer</h2>
+        <div id="dealer-cards" class="cards"></div>
+        <p>Score: <span id="dealer-score">0</span></p>
+      </div>
+
+      <div class="player-section">
+        <h2>Player</h2>
+        <div id="player-cards" class="cards"></div>
+        <p>Score: <span id="player-score">0</span></p>
+      </div>
+
+    </div>
+
+    <div class="controls">
+      <button onclick="startGame()">▶ Start</button>
+      <button onclick="hit()">➕ Hit</button>
+      <button onclick="stand()">✋ Stand</button>
+    </div>
+
+    <h2 id="message"></h2>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
